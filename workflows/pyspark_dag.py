@@ -74,7 +74,7 @@ with DAG(
     )
 
     pyspark_task_1 = DataprocSubmitJobOperator(
-        task_id="pyspark_task_1", 
+        task_id="pyspark_task_start", 
         job=PYSPARK_JOB_1, 
         region=REGION, 
         project_id=PROJECT_ID
@@ -95,7 +95,7 @@ with DAG(
     )
 
     pyspark_task_4 = DataprocSubmitJobOperator(
-        task_id="pyspark_task_4", 
+        task_id="pyspark_task_end", 
         job=PYSPARK_JOB_4, 
         region=REGION, 
         project_id=PROJECT_ID
